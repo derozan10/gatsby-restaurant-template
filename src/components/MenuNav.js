@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Link, { push } from "gatsby-link";
 
@@ -23,55 +23,58 @@ const StyledSelect = styled.select`
   margin-bottom: 1.45rem;
 `;
 
-const routeToMenu = menu => {
-  push(`/menu/${menu}`);
-};
-
-const MenuNav = () => {
-  const activeCss = {
-    backgroundColor: "#ce0000",
-    color: "#fff"
+class MenuNav extends Component {
+  routeToMenu = menu => {
+    push(`/menu/${menu}`);
   };
 
-  let isMobile = false;
-  if (typeof window !== "undefined") {
-    window.innerWidth <= 576 ? (isMobile = true) : (isMobile = false);
+  render() {
+    const activeCss = {
+      backgroundColor: "#ce0000",
+      color: "#fff"
+    };
+
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+      window.innerWidth <= 576 ? (isMobile = true) : (isMobile = false);
+    }
+
+    if (isMobile) {
+      return (
+        <StyledSelect onChange={e => routeToMenu(e.target.value)}>
+          <option value="Tapas">Tapas</option>
+          <option value="Voorgerechten">Voorgerechten</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Vlees">Vlees</option>
+          <option value="Desserten">Desserten</option>
+          <option value="Wijn">Wijn</option>
+        </StyledSelect>
+      );
+    }
+    return (
+      <StyledMenuNav>
+        <Link to="/menu/tapas" activeStyle={activeCss}>
+          Tapas
+      </Link>
+        <Link to="/menu/voorgerechten" activeStyle={activeCss}>
+          Voorgerechten
+      </Link>
+        <Link to="/menu/pasta" activeStyle={activeCss}>
+          Pasta
+      </Link>
+        <Link to="/menu/vlees" activeStyle={activeCss}>
+          Vlees
+      </Link>
+        <Link to="/menu/desserten" activeStyle={activeCss}>
+          Desserten
+      </Link>
+        <Link to="/menu/wijn" activeStyle={activeCss}>
+          Wijn
+      </Link>
+      </StyledMenuNav>
+    )
   }
 
-  if (isMobile) {
-    return (
-      <StyledSelect onChange={e => routeToMenu(e.target.value)}>
-        <option value="Tapas" selected>Tapas</option>
-        <option value="Voorgerechten">Voorgerechten</option>
-        <option value="Pasta">Pasta</option>
-        <option value="Vlees">Vlees</option>
-        <option value="Desserten">Desserten</option>
-        <option value="Wijn">Wijn</option>
-      </StyledSelect>
-    );
-  }
-  return (
-    <StyledMenuNav>
-      <Link to="/menu/tapas" activeStyle={activeCss}>
-        Tapas
-      </Link>
-      <Link to="/menu/voorgerechten" activeStyle={activeCss}>
-        Voorgerechten
-      </Link>
-      <Link to="/menu/pasta" activeStyle={activeCss}>
-        Pasta
-      </Link>
-      <Link to="/menu/vlees" activeStyle={activeCss}>
-        Vlees
-      </Link>
-      <Link to="/menu/desserten" activeStyle={activeCss}>
-        Desserten
-      </Link>
-      <Link to="/menu/wijn" activeStyle={activeCss}>
-        Wijn
-      </Link>
-    </StyledMenuNav>
-  );
 };
 
 export default MenuNav;
