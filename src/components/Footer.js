@@ -56,11 +56,10 @@ export const Footer = () => (
     <div style={{ textAlign: "center" }}>
       <img style={{ margin: 0 }} src={logo} alt="logo" />
     </div>
-    <div className="socials" style={{ textAlign: "right;" }}>
+    <div className="socials" style={{ textAlign: "right" }}>
       <div className="item" id="facebook">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <svg
-            heightaria-hidden="true"
             data-prefix="fab"
             data-icon="facebook-f"
             role="img"
@@ -74,7 +73,6 @@ export const Footer = () => (
       <div className="item" id="twitter">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <svg
-            heightaria-hidden="true"
             data-prefix="fab"
             data-icon="twitter"
             role="img"
@@ -88,7 +86,6 @@ export const Footer = () => (
       <div className="item" id="instagram">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <svg
-            heightaria-hidden="true"
             data-prefix="fab"
             data-icon="instagram"
             role="img"

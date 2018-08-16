@@ -32,11 +32,7 @@ const StyledHero = styled.div`
     top: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.25)
-      ),
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
       linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(17, 33, 6, 0.75));
     opacity: 0.8;
     z-index: -1;
