@@ -10,7 +10,7 @@ const StyledFooter = styled.div`
   max-width: 80vw;
   margin-top: 1.45rem;
   > div {
-    width: 30%;
+    width: 33%;
   }
   p {
     margin: 4px;
@@ -56,7 +56,14 @@ export const Footer = () => (
     <div style={{ textAlign: "center" }}>
       <img style={{ margin: 0 }} src={logo} alt="logo" />
     </div>
-    <div className="socials" style={{ textAlign: "right" }}>
+    <div
+      className="socials"
+      style={{
+        textAlign: "right",
+        display: "flex",
+        justifyContent: "flex-end"
+      }}
+    >
       <div className="item" id="facebook">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <svg
