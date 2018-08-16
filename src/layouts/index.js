@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import "./index.css";
 import { Footer } from "../components/Footer";
+import favicon from "../assets/img/thumbnail-Ristretto.png"
 
 const Layout = ({ children, data }) => (
   <div>
@@ -13,6 +14,9 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: "description", content: "Sample" },
         { name: "keywords", content: "sample, something" }
+      ]}
+      link={[
+        { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
       ]}
     />
     <Hero siteTitle={data.site.siteMetadata.title} />

@@ -1,3 +1,4 @@
+
 import React from "react";
 import styled from "styled-components";
 import Link, { push } from "gatsby-link";
@@ -40,31 +41,31 @@ const MenuNav = () => {
   if (isMobile) {
     return (
       <StyledSelect onChange={e => routeToMenu(e.target.value)}>
-        <option value="Desserten">Desserten</option>
-        <option value="Pasta">Pasta</option>
-        <option value="Tapas">Tapas</option>
-        <option value="Vlees">Vlees</option>
+        <option value="Tapas" selected>Tapas</option>
         <option value="Voorgerechten">Voorgerechten</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Vlees">Vlees</option>
+        <option value="Desserten">Desserten</option>
         <option value="Wijn">Wijn</option>
       </StyledSelect>
     );
   }
   return (
     <StyledMenuNav>
-      <Link to="/menu/desserten" activeStyle={activeCss}>
-        Desserten
+      <Link to="/menu/tapas" activeStyle={activeCss}>
+        Tapas
+      </Link>
+      <Link to="/menu/voorgerechten" activeStyle={activeCss}>
+        Voorgerechten
       </Link>
       <Link to="/menu/pasta" activeStyle={activeCss}>
         Pasta
       </Link>
-      <Link to="/menu/tapas" activeStyle={activeCss}>
-        Tapas
-      </Link>
       <Link to="/menu/vlees" activeStyle={activeCss}>
         Vlees
       </Link>
-      <Link to="/menu/voorgerechten" activeStyle={activeCss}>
-        Voorgerechten
+      <Link to="/menu/desserten" activeStyle={activeCss}>
+        Desserten
       </Link>
       <Link to="/menu/wijn" activeStyle={activeCss}>
         Wijn
