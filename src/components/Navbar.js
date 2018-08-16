@@ -27,7 +27,7 @@ const Navbar = () => (
   <StyledNav>
     <div id="navItems">
       <Link to="/">Home</Link>
-      <Link to="/menu">Menu</Link>
+      <Link to="/menu">Onze kaart</Link>
       <Link to="/contact">Contact</Link>
       <Link to="/fotos">Foto&apos;s</Link>
     </div>
