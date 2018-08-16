@@ -33,8 +33,8 @@ const MenuNav = () => {
   };
 
   let isMobile = false;
-  if (typeof window !== undefined && window.innerWidth <= 576) {
-    isMobile = true;
+  if (typeof window !== undefined) {
+    window.innerWidth <= 576 ? (isMobile = true) : (isMobile = false);
   }
 
   if (isMobile) {
