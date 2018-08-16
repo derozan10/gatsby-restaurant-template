@@ -8,8 +8,7 @@ const StyledMenuNav = styled.div`
   justify-content: space-around;
   width: 100%;
   margin-bottom: 1.45rem;
-  a {
-    text-decoration: none;
+  .menuNavItem {
     cursor: pointer;
     color: #333;
     padding: 10px 20px;
@@ -50,24 +49,24 @@ const MenuNav = (props) => {
   }
   return (
     <StyledMenuNav>
-      <Link to="/menu/tapas" activeStyle={activeCss}>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Tapas")}>
         Tapas
-      </Link>
-      <Link to="/menu/voorgerechten" activeStyle={activeCss}>
+      </div>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Voorgerechten")}>
         Voorgerechten
-      </Link>
-      <Link to="/menu/pasta" activeStyle={activeCss}>
+      </div>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Pasta")}>
         Pasta
-      </Link>
-      <Link to="/menu/vlees" activeStyle={activeCss}>
+      </div>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Vlees")}>
         Vlees
-      </Link>
-      <Link to="/menu/desserten" activeStyle={activeCss}>
+      </div>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Desserten")}>
         Desserten
-      </Link>
-      <Link to="/menu/wijn" activeStyle={activeCss}>
+      </div>
+      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Wijn")}>
         Wijn
-      </Link>
+      </div>
     </StyledMenuNav>
   )
 
