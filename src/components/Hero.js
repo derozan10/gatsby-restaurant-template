@@ -3,8 +3,6 @@ import styled from "styled-components";
 import pizza from "../assets/img/pizza.jpg";
 import logo from "../assets/img/logo-Ristretto-wit.svg";
 import "animate.css";
-// import fiat from '../assets/img/fiat.jpg'
-// import terras from '../assets/img/buitenterras.jpg'
 
 const StyledHero = styled.div`
   height: 40vh;
@@ -29,9 +27,10 @@ const StyledHero = styled.div`
     content: "";
     display: block;
     position: absolute;
+    left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
       linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(17, 33, 6, 0.75));
     opacity: 0.8;
