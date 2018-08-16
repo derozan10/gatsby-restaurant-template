@@ -41,7 +41,7 @@ class MenuNav extends Component {
 
     if (isMobile) {
       return (
-        <StyledSelect onChange={e => routeToMenu(e.target.value)}>
+        <StyledSelect onChange={e => this.routeToMenu(e.target.value)}>
           <option value="Tapas">Tapas</option>
           <option value="Voorgerechten">Voorgerechten</option>
           <option value="Pasta">Pasta</option>
