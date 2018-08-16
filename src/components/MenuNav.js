@@ -1,7 +1,7 @@
 
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import Link, { push } from "gatsby-link";
+import Link from "gatsby-link";
 
 const StyledMenuNav = styled.div`
   display: flex;
@@ -23,58 +23,54 @@ const StyledSelect = styled.select`
   margin-bottom: 1.45rem;
 `;
 
-class MenuNav extends Component {
-  routeToMenu = menu => {
-    push(`/menu/${menu}`);
+const MenuNav = (props) => {
+
+  const activeCss = {
+    backgroundColor: "#ce0000",
+    color: "#fff"
   };
 
-  render() {
-    const activeCss = {
-      backgroundColor: "#ce0000",
-      color: "#fff"
-    };
-
-    let isMobile = false;
-    if (typeof window !== "undefined") {
-      window.innerWidth <= 576 ? (isMobile = true) : (isMobile = false);
-    }
-
-    if (isMobile) {
-      return (
-        <StyledSelect onChange={e => this.routeToMenu(e.target.value)}>
-          <option value="Tapas">Tapas</option>
-          <option value="Voorgerechten">Voorgerechten</option>
-          <option value="Pasta">Pasta</option>
-          <option value="Vlees">Vlees</option>
-          <option value="Desserten">Desserten</option>
-          <option value="Wijn">Wijn</option>
-        </StyledSelect>
-      );
-    }
-    return (
-      <StyledMenuNav>
-        <Link to="/menu/tapas" activeStyle={activeCss}>
-          Tapas
-      </Link>
-        <Link to="/menu/voorgerechten" activeStyle={activeCss}>
-          Voorgerechten
-      </Link>
-        <Link to="/menu/pasta" activeStyle={activeCss}>
-          Pasta
-      </Link>
-        <Link to="/menu/vlees" activeStyle={activeCss}>
-          Vlees
-      </Link>
-        <Link to="/menu/desserten" activeStyle={activeCss}>
-          Desserten
-      </Link>
-        <Link to="/menu/wijn" activeStyle={activeCss}>
-          Wijn
-      </Link>
-      </StyledMenuNav>
-    )
+  let isMobile = false;
+  if (typeof window !== "undefined") {
+    window.innerWidth <= 576 ? (isMobile = true) : (isMobile = false);
   }
 
-};
+  if (isMobile) {
+    return (
+      <StyledSelect onChange={e => props.menuChangedHandler(e.target.value)}>
+        <option value="---">Maak een selectie</option>
+        <option value="Tapas">Tapas</option>
+        <option value="Voorgerechten">Voorgerechten</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Vlees">Vlees</option>
+        <option value="Desserten">Desserten</option>
+        <option value="Wijn">Wijn</option>
+      </StyledSelect>
+    );
+  }
+  return (
+    <StyledMenuNav>
+      <Link to="/menu/tapas" activeStyle={activeCss}>
+        Tapas
+      </Link>
+      <Link to="/menu/voorgerechten" activeStyle={activeCss}>
+        Voorgerechten
+      </Link>
+      <Link to="/menu/pasta" activeStyle={activeCss}>
+        Pasta
+      </Link>
+      <Link to="/menu/vlees" activeStyle={activeCss}>
+        Vlees
+      </Link>
+      <Link to="/menu/desserten" activeStyle={activeCss}>
+        Desserten
+      </Link>
+      <Link to="/menu/wijn" activeStyle={activeCss}>
+        Wijn
+      </Link>
+    </StyledMenuNav>
+  )
+
+}
 
 export default MenuNav;
