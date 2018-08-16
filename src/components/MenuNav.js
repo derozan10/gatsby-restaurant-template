@@ -32,7 +32,11 @@ const MenuNav = () => {
     color: "#fff"
   };
 
-  const isMobile = window.innerWidth <= 576;
+  let isMobile = false;
+  if (typeof window !== undefined && window.innerWidth <= 576) {
+    isMobile = true;
+  }
+
   if (isMobile) {
     return (
       <StyledSelect onChange={e => routeToMenu(e.target.value)}>
