@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/img/logo-Ristretto-zwart.svg";
+import logo from "../assets/img/restaurantLogo-brown.svg";
 
 const StyledFooter = styled.div`
   display: flex;
@@ -49,12 +49,12 @@ const StyledFooter = styled.div`
 export const Footer = () => (
   <StyledFooter>
     <div id="footerContact">
-      <p>Tel:03 236 12 12</p>
-      <p>info@ristretto.be</p>
-      <p>Luitenant Lippenslaan 12, 2140 Antwerpen</p>
+      <p>Tel:03 333 33 33</p>
+      <p>info@uwemailadres.be</p>
+      <p>uw straat 21, 2140 Antwerpen</p>
     </div>
     <div style={{ textAlign: "center" }}>
-      <img style={{ margin: 0 }} src={logo} alt="logo" />
+      <img style={{ margin: 0, width: "100px", height: "auto" }} src={logo} alt="logo" />
     </div>
     <div
       className="socials"

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ristretto',
+    title: 'Restaurant template',
   },
   plugins: [
     {

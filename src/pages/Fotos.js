@@ -9,6 +9,9 @@ const StyledPhotos = styled.div`
   @media (max-width: 576px) {
     justify-content: center;
   }
+  .photo{
+    box-shadow: 4px 4px 4px rgba(0, 0 ,0, 0.2)
+  }
 `;
 
 const Fotos = ({ data }) => {

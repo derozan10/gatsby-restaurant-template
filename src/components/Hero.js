@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import pizza from "../assets/img/pizza.jpg";
-import logo from "../assets/img/logo-Ristretto-wit.svg";
+import heroBackground from "../assets/img/hero-bg.jpg";
+import logo from "../assets/img/restaurantLogo-white.svg";
 import "animate.css";
 
 const StyledHero = styled.div`
-  height: 40vh;
-  background: url(${pizza});
+  height: 50vh;
+  background: url(${heroBackground});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,7 +17,7 @@ const StyledHero = styled.div`
   z-index: 1;
   color: #fff;
   img {
-    width: 600px;
+    width: 300px;
     height: auto;
   }
   .notVisible {
@@ -61,7 +61,7 @@ class Hero extends Component {
   render() {
     const { isVisible } = this.state;
 
-    const imgClasses = ["animated", isVisible ? "fadeIn" : "notVisible"];
+    const imgClasses = ["heroLogo animated", isVisible ? "fadeIn" : "notVisible"];
     return (
       <StyledHero>
         <img src={logo} className={imgClasses.join(" ")} alt="logo Ristretto" />

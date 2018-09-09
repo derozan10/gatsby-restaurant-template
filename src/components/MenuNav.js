@@ -14,6 +14,10 @@ const StyledMenuNav = styled.div`
     padding: 10px 20px;
     border-radius: 5px;
   }
+    .active {
+      background: #7a554f;
+      color: #fff;
+    }
 `;
 
 const StyledSelect = styled.select`
@@ -38,7 +42,6 @@ const MenuNav = (props) => {
     return (
       <StyledSelect onChange={e => props.menuChangedHandler(e.target.value)}>
         <option value="---">Maak een selectie</option>
-        <option value="Tapas">Tapas</option>
         <option value="Voorgerechten">Voorgerechten</option>
         <option value="Pasta">Pasta</option>
         <option value="Vlees">Vlees</option>
@@ -49,22 +52,19 @@ const MenuNav = (props) => {
   }
   return (
     <StyledMenuNav>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Tapas")}>
-        Tapas
-      </div>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Voorgerechten")}>
+      <div className={`menuNavItem ${props.activeMenu === "Voorgerechten" ? 'active' : ''}`} onClick={() => props.menuChangedHandler("Voorgerechten")}>
         Voorgerechten
       </div>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Pasta")}>
+      <div className={`menuNavItem ${props.activeMenu === "Pasta" ? 'active' : ''}`} onClick={() => props.menuChangedHandler("Pasta")}>
         Pasta
       </div>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Vlees")}>
+      <div className={`menuNavItem ${props.activeMenu === "Vlees" ? 'active' : ''}`} onClick={() => props.menuChangedHandler("Vlees")}>
         Vlees
       </div>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Desserten")}>
+      <div className={`menuNavItem ${props.activeMenu === "Desserten" ? 'active' : ''}`} onClick={() => props.menuChangedHandler("Desserten")}>
         Desserten
       </div>
-      <div className="menuNavItem" onClick={() => props.menuChangedHandler("Wijn")}>
+      <div className={`menuNavItem ${props.activeMenu === "Wijn" ? 'active' : ''}`} onClick={() => props.menuChangedHandler("Wijn")}>
         Wijn
       </div>
     </StyledMenuNav>

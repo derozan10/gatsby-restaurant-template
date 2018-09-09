@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import "./index.css";
 import { Footer } from "../components/Footer";
-import favicon from "../assets/img/thumbnail-Ristretto.png"
+import favicon from "../assets/img/thumbnail-restaurant.png"
 
 const Layout = ({ children, data }) => (
   <div>

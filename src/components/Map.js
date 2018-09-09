@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import styled from "styled-components";
-import Logo from "../assets/img/logo-Ristretto-zwart.svg";
+import Logo from "../assets/img/restaurantLogo-brown.svg";
 
 const StyledMap = styled.div`
   height: 30vh;

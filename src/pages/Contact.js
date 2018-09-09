@@ -24,9 +24,9 @@ const Contact = () => {
         </div>
         <div>
           <h2>Contacteer ons</h2>
-          <p>Tel:03 236 12 12</p>
-          <p>info@ristretto.be</p>
-          <p>Luitenant Lippenslaan 12, 2140 Antwerpen</p>
+          <p>Tel:03 333 33 33</p>
+          <p>info@uwemailadres.be</p>
+          <p>Uw straat 21, 2140 Antwerpen</p>
         </div>
       </div>
 
