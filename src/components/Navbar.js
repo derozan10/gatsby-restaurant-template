@@ -20,6 +20,7 @@ const StyledNav = styled.nav`
       font-size: 20px;
       font-family: sans-serif;
       margin: 0 5px;
+      text-align: center;
     }
   }
 `;
