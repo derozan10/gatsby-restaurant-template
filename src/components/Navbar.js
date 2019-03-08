@@ -19,6 +19,7 @@ const StyledNav = styled.nav`
       text-decoration: none;
       font-size: 20px;
       font-family: sans-serif;
+      margin: 0 5px;
     }
   }
 `;

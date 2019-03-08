@@ -19,6 +19,9 @@ const StyledHero = styled.div`
   img {
     width: 300px;
     height: auto;
+    @media(max-width: 576px) {
+      width: 200px;
+    }
   }
   .notVisible {
     opacity: 0;
