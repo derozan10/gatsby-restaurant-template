@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import heroBackground from "../assets/img/hero-bg.jpg";
-import logo from "../assets/img/restaurantLogo-white.svg";
+import logo from "../assets/img/Cocotte-logo-white.svg";
 import "animate.css";
 
 const StyledHero = styled.div`

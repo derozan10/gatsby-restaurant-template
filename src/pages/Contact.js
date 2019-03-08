@@ -24,9 +24,9 @@ const Contact = () => {
         </div>
         <div>
           <h2>Contacteer ons</h2>
-          <p>Tel:03 333 33 33</p>
-          <p>info@uwemailadres.be</p>
-          <p>Uw straat 21, 2140 Antwerpen</p>
+          <p>Tel:03 522 34 34</p>
+          <p>info@Cocotte.be</p>
+          <p>Jagerstraat 21, 2050 Antwerpen</p>
         </div>
       </div>
 
