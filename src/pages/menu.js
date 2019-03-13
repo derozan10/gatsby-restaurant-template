@@ -31,7 +31,7 @@ class Menu extends Component {
     ));
 
     return (
-      <div>
+      <div className="container">
         <MenuNav menuChangedHandler={this.showMenu} activeMenu={this.state.activeMenu} />
         {this.state.activeMenu === "Wijn" ? <Wijn data={this.props.data.allContentfulWijnen.edges} /> : gerechten}
       </div>
