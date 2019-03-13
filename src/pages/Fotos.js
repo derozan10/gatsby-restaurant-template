@@ -20,7 +20,7 @@ const Fotos = ({ data }) => {
   ));
 
   return (
-    <div>
+    <div className="container">
       <h1>Foto&apos;s</h1>
       <StyledPhotos>{photos}</StyledPhotos>
     </div>
