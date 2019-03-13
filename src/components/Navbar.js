@@ -9,18 +9,20 @@ const StyledNav = styled.nav`
   #navItems {
     margin: 0 auto;
     max-width: 960;
-    padding: 1.45rem 1.0875rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     a {
       display: inline-block;
+      padding: 20px 10px;
       color: #be1e0c;
       text-decoration: none;
       font-size: 20px;
       font-family: sans-serif;
-      margin: 0 5px;
       text-align: center;
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
     }
   }
 `;
