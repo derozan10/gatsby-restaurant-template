@@ -4,7 +4,7 @@ const IndexPage = () => (
   <div>
     <h1>Welkom bij Cocotte</h1>
     <p>
-      Restaurant Cocotter is een restaurant waar je kan genieten van een verfijnde keuken.
+      Restaurant Cocotte is een restaurant waar je kan genieten van een verfijnde keuken.
       We hebben dagelijks verse vlees- en visgerechten, alsook vegeterische opties.
     </p>
     <p>Liefhebbers van lekkere Franse wijnen zullen hier zeker hun keuze kunnen maken!</p>
