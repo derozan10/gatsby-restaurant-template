@@ -15,7 +15,7 @@ const StyledContact = styled.div`
 const Contact = () => {
   return (
     <StyledContact>
-      <div className="contactFlex">
+      <div className="contactFlex container">
         <div>
           <h2>Openingsuren</h2>
           <p>Maandag tot Vrijdag: 12u - 14u / 17u - 20u</p>
