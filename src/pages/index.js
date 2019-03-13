@@ -1,7 +1,7 @@
 import React from "react";
 
 const IndexPage = () => (
-  <div>
+  <div className="container">
     <h1>Welkom bij Cocotte</h1>
     <p>
       Restaurant Cocotte is een restaurant waar je kan genieten van een verfijnde keuken.
